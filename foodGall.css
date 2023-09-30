@@ -4,15 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Croissant+One&family=Mooli&family=Roboto:wght@400;500;700&family=Rubik+Burned&family=Russo+One&family=Skranji&family=Teko:wght@500&display=swap');
 
 *{
-    margin: 0;
+    margin: 0 ;
     padding: 0;
     font-family: 'roboto',san-serif;
+    /* width: 100%; */
 }
 nav{
     height: 80px;
     background-color: rgba(17, 16, 16, 0.767);
     margin-bottom: 0px;
-    position: fixed;
+    /* position: ; */
     width: 100%;
     overflow: hidden;
     z-index: 1;
@@ -185,7 +186,10 @@ label {
     }
    
 }
-@media(max-width:400px){
+@media(max-width:410px){
+    nav{
+        width: 100%;
+    }
     nav .menu ul{
         position: fixed;
         top:80px;
@@ -236,7 +240,7 @@ img{
 }
 @media(max-width:400px){
     .section{
-        flex: 100%;
+        flex: 90%;
     }
 }
 
@@ -247,7 +251,7 @@ img{
     text-align:center;
     /* position: fixed; */
     /* bottom: 0; */
-    width: 100%;
+    /* width: 100%; */
     /* top: 600px; */
     margin: 0 3px;
     padding: 0 3px;
