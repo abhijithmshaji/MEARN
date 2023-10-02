@@ -11,7 +11,7 @@
 }
 nav{
     height: 80px;
-    background-color: rgba(17, 16, 16, 0.767);
+    background-color: rgba(17, 16, 16, 0.507);
     margin-bottom: 0px;
     position: fixed;
     width: 100%;
@@ -34,14 +34,15 @@ nav .header{
     
 }
 nav .logo a{
-    font-size: 32px;
+    font-size: 35px;
     color: #fff;
     text-decoration: none;
     font-weight: 700;
-    font-family: 'Nosifer', cursive;
-    animation: neon 3s ease infinite;    
+    font-family: 'poppins';
+    /* font-family: 'Nosifer', cursive; */
+    /* animation: neon 3s ease infinite;     */
 }
-@keyframes neon {
+/* @keyframes neon {
     0%,
     100% {
         text-shadow: 0 0 10px #d67c28a8, 0 0 20px #ddcb78a8, 0 0 20px #dbdac5a8, 0 0 20px #ef00e3a8, 0 0 2px #fed128, 2px 2px 2px #806914;
@@ -50,8 +51,8 @@ nav .logo a{
     50% {
         text-shadow: 0 0 2px #800e0b, 0 0 5px #d1807d, 0 0 5px #ebe2e1, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
         color: #ddeb1a;
-    }
-}
+    } */
+/* } */
 nav .menu ul{
     display: flex;
 }
@@ -60,22 +61,37 @@ nav .menu ul li{
     margin: 0 15px;
 }
 nav .menu ul li a{
+    position: relative;
     text-decoration: none;
     font-size: 18px;
     color: #fff;
     font-weight: 400;
-    transition: all 400ms;
+    transition: all 100ms;
     letter-spacing: 1px;
+    padding: 10px;
+
 }
+/* nav .menu ul li a::after{
+    display: flex;
+    text-decoration: none;
+    position: absolute;
+    background-color: brown;
+    height: 3px;
+    width: 10%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+} */
+
 nav .menu ul li a:hover{
-    padding: 8px;
-    background: #fff;
-    color: #000;
-    border: none;
+    padding: 15px;
+    /* background: #fff; */
+    color: #e3e8f0;
+    border: 4px solid rgb(240, 188, 188);
     outline: none;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 18px;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 20px;
 }
 label i{
     color: #fff;
@@ -104,45 +120,56 @@ video {
     left: 0;
   }
 .caption{
+    width: 79%;
     position: absolute;
+    /* flex-basis: 50%; */
+    /* left: 20%; */
     top: 360px;
     left: 100px;
     font-family: 'Croissant One', cursive;
     font-size: 100px;
     font-weight: 1000;
     letter-spacing: 2px;
+    justify-content: center;
+    background: url(./image/back.png);
+    background-size: cover;
     /* text-shadow: 1px 1px 2px rgb(197, 171, 171), 0 0 1em blue, 0 0 0.2em blue; */
     text-align: center;
     /* color: #9ad175; */
     /* text-transform: uppercase; */
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
       -225deg,
       #9281cf 0%,
       #0d93d1 29%,
       #ff1361 67%,
       #fff800 100%
-    );
-    background-size: auto auto;
+    ); */
+    /* background-size: auto auto; */
     background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
+    background-size: 200% 100%;
+    color:transparent;
     background-clip: text;
     /* text-fill-color: transparent; */
+    -webkit-text-stroke: 1px #fff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 3s linear infinite;
     display: inline-block;
+    
         /* font-size: 190px; */
+    
 }
 @keyframes textclip {
     to {
       background-position: 100% center;
     }
   }
+  
   .section img{
     transform: scale(.9);
     transition: .5s ease-in-out;
   }
+  
   .section img:hover {
     transform: scale(1);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -163,12 +190,13 @@ video {
     }
     nav .menu ul li{
         margin: 30px 0;
+        /* display: inline-block; */
     }
     nav .menu ul li a{
         font-size: 20px;
     }
     nav .menu ul li a:hover{
-        color: cyan;
+        color: rgb(55, 163, 235);
         padding: unset;
     background:unset;
     border: unset;
@@ -259,20 +287,21 @@ img{
 
 .footer{
     background:#000;
-    padding:30px 0px;
+    padding:0px 0px;
+    /* color: #fff; */
     font-family: 'Play', sans-serif;
     text-align:center;
     /* position: fixed; */
     /* bottom: 0; */
     /* width: 100%; */
     /* top: 600px; */
-    margin: 0 3px;
-    padding: 0 3px;
+    margin: 0px;
+    padding: 0px;
     }
     
     .footer .row{
     width:100%;
-    margin:1% 0%;
+    margin:0% 0%;
     padding:0.6% 0%;
     color:gray;
     font-size:0.8em;
